@@ -1,10 +1,20 @@
 'use client';
-const PropertyPage = () => {
-	return (
-		<div>
-			<h1 className='text-3xl'>PropertyPage</h1>
-		</div>
-	);
+
+import PropertyCard from '@/components/PropertyCard';
+import { useEffect, useState } from 'react';
+import { fetchProperty } from '@/utils/requests';
+
+const PropertyPage = ({ params }) => {
+	const { id } = params;
+	const [property, setProperty] = useState(null);
+
+	useEffect(() => {
+		fetchProperty(id).then((json) => {
+			setProperty(json);
+		});
+	}, [id]);
+
+	return property && <PropertyCard property={property}></PropertyCard>;
 };
 
 export default PropertyPage;
