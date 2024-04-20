@@ -1,7 +1,8 @@
 'use client';
+
 import { FadeLoader } from 'react-spinners';
 
-const LoadingPage = ({ loading }) => {
+const Spinner = ({ loading }) => {
 	const override = {
 		display: 'block',
 		margin: '100px auto',
@@ -14,9 +15,8 @@ const LoadingPage = ({ loading }) => {
 			cssOverride={override}
 			size={150}
 			aria-label='Loading Spinner'
-			data-testid='loader'
 		/>
 	);
 };
 
-export default LoadingPage;
+export default Spinner;
