@@ -6,15 +6,18 @@ export const metadata = {
 	description: 'Find your dream rental property',
 	keywords: 'rental, find rentals'
 };
+import AuthProvider from '@/components/AuthProvider';
 const MainLayout = ({ children }) => {
 	return (
-		<html lang='en'>
-			<body>
-				<Navbar />
-				<main>{children}</main>
-				<Footer />
-			</body>
-		</html>
+		<AuthProvider>
+			<html lang='en'>
+				<body>
+					<Navbar />
+					<main>{children}</main>
+					<Footer />
+				</body>
+			</html>
+		</AuthProvider>
 	);
 };
 
