@@ -60,7 +60,6 @@ export const POST = async (request) => {
 				email: formData.get('seller_info.email'),
 				phone: formData.get('seller_info.phone')
 			},
-			images: uploadedImages,
 			owner: sessionUser.userId
 		};
 

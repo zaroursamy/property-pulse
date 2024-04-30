@@ -6,4 +6,5 @@ npm i react-spinners
 npm i mongodb mongoose
 npm i next-auth
 npm install cloudinary
+npm i react-toastify
 ```

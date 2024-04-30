@@ -46,6 +46,8 @@ async function fetchProperty(id) {
 		if (apiDomain !== null) {
 			const res = await fetch(`${apiDomain}/properties/${id}`);
 
+			console.log(`res=${res}`);
+
 			if (!res.ok) {
 				throw new Error(`Failed to fetch property ${id}`);
 			}

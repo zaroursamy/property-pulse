@@ -7,6 +7,9 @@ import { useSession } from 'next-auth/react';
 import profileDefault from '@/assets/images/profile.png';
 import { fetchUserProperties, deleteProperty } from '@/utils/requests';
 import Spinner from '@/components/Spinner';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ProfilePage = () => {
 	const { data: session } = useSession();
 	const profileImage = session?.user?.image;
@@ -36,6 +39,9 @@ const ProfilePage = () => {
 				(property) => property._id !== deletedProperty._id
 			);
 			setProperties(updatedProperties);
+			toast.success('Property succesfully deleted');
+		} else {
+			toast.error('Fail to delete property');
 		}
 	};
 

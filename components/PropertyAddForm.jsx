@@ -109,12 +109,7 @@ const PropertyAddForm = () => {
 					className='border rounded w-full py-2 px-3'
 					required
 					value={property.type}
-					onChange={(e) =>
-						setProperty((prev) => ({
-							...prev,
-							type: e.target.value
-						}))
-					}
+					onChange={handleChangeValue}
 				>
 					<option value='Apartment'>Apartment</option>
 					<option value='Condo'>Condo</option>

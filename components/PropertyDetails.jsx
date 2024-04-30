@@ -30,7 +30,9 @@ const PropertyDetails = ({ property, loading }) => {
 					<FaLocationDot className='text-lg text-orange-700 mr-2' />
 					<i className='fa-solid fa-location-dot text-lg text-orange-700 mr-2'></i>
 					<p className='text-orange-700'>
-						{location.street}, {location.state} {location.zipcode}
+						{location.street}, {location.zipcode}
+						{'  '}
+						{location.city} {`(${location.state})`}
 					</p>
 				</div>
 
