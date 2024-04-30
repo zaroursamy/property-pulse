@@ -2,6 +2,7 @@ import connectDB from '@/config/database';
 import Property from '@/models/Property';
 import { getSessionUser } from '@/utils/getSession';
 import { uploadImagesToCloudinary } from '@/utils/image';
+
 // GET /api/properties
 export const GET = async (request) => {
 	try {
